@@ -1,0 +1,194 @@
+/*----------------------------------------*/
+/*  05. brand
+/*----------------------------------------*/
+.brand-slider {
+	.xb-swiper {
+		a {
+			display: inline-block;
+			padding: 25px 27px;
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			min-height: 80px;
+			opacity: .5;
+			@include center;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: var(--color-white);
+				content: "";
+				box-shadow: 0px 14px 19px 0px rgba(221, 229, 236, 0.42);
+				opacity: 0;
+				@include transition(.3s);
+				z-index: -1;
+				@include border-radius(10px);
+				@include transform(scale(0.8));
+			}
+			&:hover {
+				opacity: 1;
+				&::before {
+					@include transform(scale(1));
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.brand-title {
+	font-size: 18px;
+	color: var(--color-default);
+	letter-spacing: -0.18px;
+	& > span {
+		padding: 0 100px;
+		position: relative;
+		display: inline-block;
+		
+		@include respond(xs) {
+			padding: 0;
+		}
+		&::before {
+			position: absolute;
+			top: 60%;
+			@include transform(translateY(-50%));
+			width: 100%;
+			height: 1px;
+			background-color: var(--color-default);
+			content: "";
+			left: 0;
+			z-index: -1;
+		}
+		span {
+			padding: 0 10px;
+			background-color: var(--color-white);
+		}
+	}
+}
+.xb-brand1 {
+	.xb-item {
+	  &--item {
+		width: 20%; // 5 per row
+		@include center;
+		padding: 53px 20px;
+		border-top: 1px dashed #D4D5D6;
+		border-right: 1px dashed #D4D5D6;
+		position: relative;
+		min-height: 152px;
+		background-color: #fff;
+		margin-top: -1px;
+  
+		@include respond(md) {
+		  min-height: 100px;
+		  padding: 25px 20px;
+		}
+  
+		@include respond(xs) {
+		  width: 50%; // 2 per row
+		}
+  
+		// Desktop - Remove top border on first row
+		&:nth-child(-n + 5) {
+		  border-top: 0;
+		}
+  
+		// Desktop - Remove right border on every 5th item
+		&:nth-child(5n) {
+		  border-right: 0;
+		}
+  
+		// Mobile - Adjust for 2 items per row
+		@include respond(xs) {
+		  // First row (2 items)
+		  &:nth-child(-n + 2) {
+			border-top: 0;
+		  }
+  
+		  // Every 2nd item on mobile - remove right border
+		  &:nth-child(2n) {
+			border-right: 0;
+		  }
+		}
+  
+		// Hover effect
+		&:hover {
+		  background-color: #fafafa;
+		  border: 1px dashed #D4D5D6;
+		  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+		  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+		  transform: translateY(-2px);
+		  border-color: #000102;
+		}
+	  }
+  
+	  &--inner {
+		@include center;
+		z-index: 1;
+  
+		img {
+		  max-width: 180px;
+  
+		  @include respond(lg) {
+			max-width: 150px;
+		  }
+  
+		  @include respond(md) {
+			max-width: 100px;
+		  }
+		}
+	  }
+	}
+  }
+  
+  
+  
+.brand-shape {
+	.shape {
+		position: absolute;
+		z-index: -1;
+		&--1 {
+			top: 42%;
+			left: 4%;
+		}
+		&--2 {
+			top: 45%;
+			right: 4%;
+		}
+	}
+}
+
+.xb-brand2 {
+	.xb-item {
+		&--inner {
+			padding: 35px 15px;
+			background-color: var(--color-white);
+			@include center;
+			filter: drop-shadow(0px 14px 19px rgba(221, 229, 236, 0.42));
+			@include border-radius(20px);
+			@include transition(.3s var(--easing));
+			min-height: 150px;
+			&:hover {
+				@include transform(translateY(-5px));
+			}
+		}
+	}
+	&__mt {
+		margin-top: -170px;
+		z-index: 1;
+		position: relative;
+	}
+}
+.brand-pb {
+	padding-bottom: 260px;
+	background-color: #f0f2f6;
+}
+.xb-strock-text-brand {
+	bottom: 30%;
+	z-index: -1;
+	left: -10%;
+  	right: -10%;
+	@include respond(xs) {
+		bottom: 58%;
+	}
+}

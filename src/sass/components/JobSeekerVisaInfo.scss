@@ -1,0 +1,322 @@
+.visa-info {
+  padding: 50px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #0c1f3c;
+  background: #ffffff;
+
+  &__section {
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+
+  &__title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 800;
+    color: #161616;
+    margin-bottom: 40px;
+    position: relative;
+    animation: fadeInDown 0.8s ease forwards;
+    opacity: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 5px;
+      background: #ffb703;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+    
+  }
+
+  &__hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: radial-gradient(circle at top right, #e0f7fa, #ffffff);
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+
+    .visa-info__headline {
+      font-size: 48px;
+      font-weight: 900;
+      color: #121212;
+      margin-bottom: 24px;
+    }
+
+    .visa-info__intro {
+      font-size: 20px;
+      color: #5c677d;
+      margin: 0 auto 32px;
+      max-width: 740px;
+      line-height: 1.6;
+    }
+
+    .visa-info__cta-button {
+      display: inline-block;
+      background: #ffb703;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 40px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255, 183, 3, 0.3);
+
+      &:hover {
+        background: #e0a900;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  &__country-item {
+    background: #ffffff;
+    border: 1px solid #d0e3f0;
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &__country-flag {
+    width: 64px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+  }
+
+  &__country-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #151515;
+    margin-bottom: 12px;
+  }
+
+  &__country-description {
+    font-size: 16px;
+    color: #4f5e70;
+    line-height: 1.7;
+  }
+
+  &__eligibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  &__eligibility-item {
+    background: #ffffff;
+    border: 1px solid #d4e5f2;
+    padding: 36px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+
+    &:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__eligibility-icon {
+    font-size: 34px;
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #104b83, #1c6cb2);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &__eligibility-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #181818;
+    margin-bottom: 12px;
+  }
+
+  &__eligibility-text {
+    font-size: 15px;
+    color: #5f6c7b;
+    line-height: 1.7;
+  }
+
+  &__section.steps-section {
+    padding: 40px 20px;
+    background-color: #f2f8fc;
+    border-radius: 16px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+
+    .visa-info__title {
+      font-size: 36px;
+      color: #040404;
+      margin-bottom: 40px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #d4af37;
+        margin: 20px auto 0;
+        border-radius: 2px;
+      }
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+    }
+
+    .step-card {
+      background: #ffffff;
+      padding: 36px 24px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(16, 75, 131, 0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(16, 75, 131, 0.15);
+      }
+      
+
+      .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        background-color: #104b83;
+        color: #ffffff;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: #0d3a68;
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #104b83;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        color: #5f6c7b;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__headline {
+      font-size: 32px !important;
+    }
+
+    &__intro,
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__eligibility-text,
+    &__why-item,
+    &__country-description {
+      font-size: 14px;
+    }
+  }
+}
+.visa-info__search-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background: #f1f5f9;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: 1px solid #d0d7e2;
+  transition: all 0.3s ease;
+
+  &:focus-within {
+    border-color: #104b83;
+    background: #eaf2f9;
+  }
+}
+
+.visa-info__search-icon {
+  color: #104b83;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.visa-info__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #0c1f3c;
+
+  &::placeholder {
+    color: #a0aab4;
+    font-weight: 400;
+  }
+}

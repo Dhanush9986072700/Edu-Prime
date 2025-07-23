@@ -1,0 +1,94 @@
+.visa-search-results {
+  padding: 20px;
+  background: #fff;
+
+  .search-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+
+  .no-results {
+    font-size: 16px;
+    color: #777;
+  }
+
+  .search-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .search-card {
+    background: #f5f7fb;
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      background: #eaf1ff;
+      transform: translateY(-2px);
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #004AAD;
+      margin-bottom: 6px;
+    }
+
+    .card-category {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+      background: #dbe9ff;
+      color: #004AAD;
+      text-transform: uppercase;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    // Category color variations (optional)
+    .category-study-visa {
+      background: #e1f4e8;
+      color: #1e824c;
+    }
+
+    .category-tourist-visa {
+      background: #fff5d1;
+      color: #b38b00;
+    }
+
+    .category-investor-visa {
+      background: #e7dbfc;
+      color: #6f42c1;
+    }
+
+    .category-job-seeker-visa {
+      background: #d1f0ff;
+      color: #007b8a;
+    }
+
+    .category-service {
+      background: #ffe4e1;
+      color: #d9534f;
+    }
+  }
+}

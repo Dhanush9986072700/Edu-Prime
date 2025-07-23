@@ -1,0 +1,125 @@
+.package-bg {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  .xb-strock-text {
+    bottom: 37%;
+  }
+}
+
+.xb-package {
+  .xb-item {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &--inner {
+      padding: 15px;
+      background: #fff;
+      @include border-radius(12px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &--img {
+      @include border-radius(20px 20px 0 0);
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transform(scale(1.05));
+        @include transition(transform 0.4s ease);
+      }
+    }
+
+    &:hover &--img img {
+      @include transform(scale(1.08));
+    }
+
+    &--holder {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &--country {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      img {
+        width: 26px;
+        height: 26px;
+        @include border-radius(50%);
+        margin-right: 10px;
+      }
+
+      .xb-item--title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+    }
+
+    &--para {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 10px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &--info {
+      padding-top: 18px;
+      margin-top: auto;
+      border-top: 1px solid #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+
+      li {
+        font-size: 14px;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '✓';
+          color: var(--color-primary);
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &--btn {
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 20px;
+      border: 1px solid #f1f5f9;
+      padding: 10px 24px;
+      @include border-radius(94px);
+      text-align: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+
+
