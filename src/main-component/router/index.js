@@ -11,7 +11,7 @@ import Usa from '../CountryList/usa';
 import TouristVisa from '../Pages/TouristVisa/TouristVisa';
 import InvestorVisa from '../../main-component/Pages/Investor/InvestorVisa';
 import JobseakerVisa from '../../main-component/Pages/JobseakerVisa/JobseakerVisa';
-import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'; // ✅ import
+import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 
 
 
