@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Header3 from '../../components/header3/Header3';
-import Hero from '../../components/hero/hero';
+import Homepagehero from '../../components/Homepagehero/Homepagehero';
 import PartnerSection from '../../components/PartnerSection';
 import ServiceSection from '../../components/ServiceSection/ServiceSection';
 import ImmigrationProcess from '../../components/about/ImmigrationProcess';
@@ -19,7 +19,7 @@ const HomePage = () => {
         <Fragment>
             <div>
                 <Header3 />
-                <Hero />
+                <Homepagehero />
                 <PartnerSection />
                 <ServiceSection />
                 <ImmigrationProcess />

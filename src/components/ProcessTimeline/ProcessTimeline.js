@@ -38,7 +38,10 @@ const timelineData = [
 
 const ProcessTimeline = () => {
   return (
-    <section className="process-timeline" aria-labelledby="timeline-heading">
+    <section
+      className="process-timeline"
+      aria-labelledby="timeline-heading"
+    >
       <div className="container">
         <h2 id="timeline-heading" className="process-timeline__title">
           Process Timeline / How It Works
@@ -48,16 +51,15 @@ const ProcessTimeline = () => {
             <React.Fragment key={index}>
               <article
                 className="process-timeline__card"
-                itemScope
-                itemType="https://schema.org/HowToStep"
+                aria-label={`Step ${index + 1}: ${item.title}`}
               >
                 <div className="process-timeline__icon-circle" aria-hidden="true">
                   {item.icon}
                 </div>
-                <h3 className="process-timeline__heading" itemProp="name">
+                <h3 className="process-timeline__heading">
                   {item.title}
                 </h3>
-                <p className="process-timeline__description" itemProp="text">
+                <p className="process-timeline__description">
                   {item.description}
                 </p>
               </article>

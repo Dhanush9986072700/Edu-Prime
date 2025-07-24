@@ -30,7 +30,7 @@ const CategorySection = () => {
               <div
                 className="info-icon"
                 style={{
-                  backgroundColor: `${item.color}1A`, // Light transparent background
+                  backgroundColor: `${item.color}1A`,
                   color: item.color,
                 }}
               >

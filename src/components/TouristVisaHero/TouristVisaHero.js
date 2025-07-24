@@ -5,7 +5,7 @@ import heroBg from '../../images/bg/turist-visa.png';
 import SocialIcons from '../SocialIcons/SocialIcons';
 
 
-const Hero4 = () => {
+const TouristVisaHero = () => {
   return (
     <section
       className="hero5"
@@ -31,5 +31,5 @@ const Hero4 = () => {
   );
 };
 
-export default Hero4;
+export default TouristVisaHero;
 

@@ -64,32 +64,40 @@ const studyVisaSteps = [
 
 const StudyVisaProcess = () => {
   return (
-    <section className="service service-bottom-pb pos-rel white pt-90">
+    <section
+      className="service service-bottom-pb pos-rel white pt-90"
+      aria-labelledby="study-visa-process-heading"
+    >
       <div className="container">
         <div className="sec-title sec-title--black style-2 mb-20">
-          <span className="sec-title--sub">
-            Study Visa Process
-          </span>
-          <h3 className="section-sub-headline">Study Visa Process – Step-by-Step Guidance</h3>
+          <span className="sec-title--sub">Study Visa Process</span>
+          <h2 id="study-visa-process-heading" className="section-sub-headline">
+            Study Visa Process – Step-by-Step Guidance
+          </h2>
         </div>
 
         <div className="xb-service2__wrap ul_li pt-30">
           {studyVisaSteps.map((step, index) => (
-            <div className="xb-service2" key={index}>
+            <article
+              className="xb-service2"
+              key={index}
+              itemScope
+              itemType="https://schema.org/HowToStep"
+            >
               <div className="xb-item--inner">
-                <div className="xb-item--icon">
-                  <FontAwesomeIcon icon={step.icon} size="2x"  />
+                <div className="xb-item--icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={step.icon} size="2x" />
                 </div>
                 <div className="xb-item--holder">
-                  <h3 className="xb-item--title">
+                  <h3 className="xb-item--title" itemProp="name">
                     {step.title}
                   </h3>
-                  <p className="xb-item--content">
+                  <p className="xb-item--content" itemProp="text">
                     {step.description}
                   </p>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

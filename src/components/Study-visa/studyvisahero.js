@@ -1,13 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../sass/components/Hero5.scss';
-import heroBg from '../../images/bg/student-visa-banner.png'; // update path if needed
+import heroBg from '../../images/bg/student-visa-banner.png';
 import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Studyvisahero = () => {
     return (
-        <section className="hero5" style={{ backgroundImage: `url(${heroBg})` }} >
+        <section
+            className="hero5"
+            style={{ backgroundImage: `url(${heroBg})` }}
+            aria-label="Study Visa Hero Banner Section"
+        >
             <div className="hero5__overlay"></div>
+
+            {/* Optional SEO: Hidden image for bots */}
+            <div style={{ display: 'none' }}>
+                <img src={heroBg} alt="Student Visa Banner - Study Abroad with Expert Guidance" />
+            </div>
+
             <div className="hero5__content">
                 <h1>
                     Planning to study abroad?<br />
@@ -18,9 +28,14 @@ const Studyvisahero = () => {
                     we guide you every step of the way for a hassle-free admission journey.
                 </p>
                 <div className="btns">
-                    <Link className="thm-btn" to="/#">Read Story</Link>
+                    <Link
+                        className="thm-btn"
+                        to="/study-visa-process"
+                        aria-label="Read how we help students get visas"
+                    >
+                        Read Story
+                    </Link>
                 </div>
-
             </div>
             <SocialIcons />
         </section>

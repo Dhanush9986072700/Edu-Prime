@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "../../sass/components/PopularCountries.scss";
 import allPrograms from "../../api/investmentPrograms";
 
@@ -16,6 +16,9 @@ const PopularCountries = () => {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  const investOptions = useMemo(() => ["Any", "100000", "250000", "500000"], []);
+  const visibleTabs = useMemo(() => ["All Regions", ...new Set(allPrograms.map((s) => s.region.split("Residency")[0].trim()))], []);
 
   const filtered = allPrograms.map((section) => {
     const regionName = section.region.split("Residency")[0].trim();
@@ -40,12 +43,7 @@ const PopularCountries = () => {
     };
   });
 
-  const visibleTabs = ["All Regions", ...new Set(filtered.map((s) => s.regionName))];
-  const investOptions = ["Any", "100000", "250000", "500000"];
-
   let displayedSections;
-  const isFiltering = search !== "" || minInvest !== "Any" || regionFilter !== "All Regions";
-
   if (search) {
     const matchingPrograms = [];
     allPrograms.forEach((section) => {
@@ -61,67 +59,55 @@ const PopularCountries = () => {
       });
     });
 
-    displayedSections =
-      matchingPrograms.length > 0
-        ? [
-            {
-              region: `Search Results for "${search}"`,
-              regionName: "Search",
-              programs: matchingPrograms,
-            },
-          ]
-        : [
-            {
-              region: `No results found for "${search}"`,
-              regionName: "None",
-              programs: [],
-            },
-          ];
+    displayedSections = matchingPrograms.length
+      ? [{
+          region: `Search Results for "${search}"`,
+          regionName: "Search",
+          programs: matchingPrograms,
+        }]
+      : [{
+          region: `No results found for "${search}"`,
+          regionName: "None",
+          programs: [],
+        }];
   } else if (activeTab === "All Regions") {
-    let combinedPrograms = [];
-    filtered.forEach((section) => {
-      combinedPrograms = combinedPrograms.concat(
-        section.programs.map((p) => ({ ...p, region: section.region }))
-      );
-    });
-    combinedPrograms = combinedPrograms.slice(0, 10);
-
-    displayedSections = [
-      {
-        region: "Top 10 Investment Programs",
-        regionName: "Top 10",
-        programs: combinedPrograms,
-      },
-    ];
-  } else {
-    displayedSections = filtered.filter(
-      (f) => f.regionName === activeTab && f.programs.length > 0
+    let combined = [];
+    filtered.forEach((section) =>
+      combined.push(...section.programs.map((p) => ({ ...p, region: section.region })))
     );
+    displayedSections = [{
+      region: "Top 10 Investment Programs",
+      regionName: "Top",
+      programs: combined.slice(0, 10),
+    }];
+  } else {
+    displayedSections = filtered.filter((f) => f.regionName === activeTab && f.programs.length > 0);
   }
 
   return (
-    <section className="citizenship-programs">
+    <section className="citizenship-programs" aria-label="Residency and Citizenship by Investment Programs">
       <div className="container">
-        <div className="toolbar">
+        <div className="toolbar" role="search">
           <input
             type="search"
+            aria-label="Search country or program"
             placeholder="Search by program or country..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <select value={regionFilter} onChange={(e) => setRegionFilter(e.target.value)}>
+          <select value={regionFilter} onChange={(e) => setRegionFilter(e.target.value)} aria-label="Filter by region">
             {visibleTabs.map((r, i) => (
               <option key={i}>{r}</option>
             ))}
           </select>
-          <select value={minInvest} onChange={(e) => setMinInvest(e.target.value)}>
+          <select value={minInvest} onChange={(e) => setMinInvest(e.target.value)} aria-label="Filter by minimum investment">
             {investOptions.map((opt, i) => (
               <option key={i} value={opt}>
                 {opt === "Any" ? "Any Investment" : `€${opt}`}
               </option>
             ))}
           </select>
-          <select value={sortKey} onChange={(e) => setSortKey(e.target.value)}>
+          <select value={sortKey} onChange={(e) => setSortKey(e.target.value)} aria-label="Sort by criteria">
             <option value="program">Sort: Program</option>
             <option value="investment">Sort: Investment</option>
             <option value="processing">Sort: Processing</option>
@@ -135,17 +121,19 @@ const PopularCountries = () => {
               setSortKey("program");
               setActiveTab("All Regions");
             }}
+            aria-label="Clear filters"
           >
             Clear
           </button>
         </div>
 
-        <nav className="region-tabs">
+        <nav className="region-tabs" aria-label="Program Region Tabs">
           {visibleTabs.map((tab, idx) => (
             <button
               key={idx}
               className={`tab ${activeTab === tab ? "active" : ""}`}
               onClick={() => setActiveTab(tab)}
+              aria-label={`Show ${tab} programs`}
             >
               {tab} Programs
             </button>
@@ -164,17 +152,22 @@ const PopularCountries = () => {
                 <table className="main-table">
                   <thead>
                     <tr>
-                      <th>Program</th>
-                      <th>Investment</th>
-                      <th>Processing</th>
-                      <th>Benefits</th>
+                      <th scope="col">Program</th>
+                      <th scope="col">Investment</th>
+                      <th scope="col">Processing</th>
+                      <th scope="col">Benefits</th>
                     </tr>
                   </thead>
                   <tbody>
                     {section.programs.map((p, i) => (
                       <tr key={i}>
                         <td className="prog">
-                          <img src={p.icon} alt={`${p.country} flag`} className="flag-icon" loading="lazy" />
+                          <img
+                            src={p.icon}
+                            alt={`${p.country} flag`}
+                            className="flag-icon"
+                            loading="lazy"
+                          />
                           <span>{p.title}</span>
                         </td>
                         <td>{p.investment}</td>
@@ -182,7 +175,7 @@ const PopularCountries = () => {
                         <td>
                           <ul>
                             {p.benefit
-                              .split("\u2022")
+                              .split("•")
                               .map((b, bi) => b.trim() && <li key={bi}>{b.trim()}</li>)}
                           </ul>
                         </td>
@@ -191,25 +184,25 @@ const PopularCountries = () => {
                   </tbody>
                 </table>
               ) : (
-                <div className="accordion">
+                <div className="accordion" aria-label="Mobile program list">
                   {section.programs.map((p, i) => (
                     <details key={i}>
                       <summary>
-                        <img src={p.icon} alt={`${p.country} flag`} />
+                        <img
+                          src={p.icon}
+                          alt={`${p.country} flag`}
+                          loading="lazy"
+                        />
                         <span>{p.title}</span>
                       </summary>
                       <div className="acc-content">
-                        <div className="info-block">
-                          <strong>Investment:</strong> {p.investment}
-                        </div>
-                        <div className="info-block">
-                          <strong>Processing:</strong> {p.processing}
-                        </div>
+                        <div className="info-block"><strong>Investment:</strong> {p.investment}</div>
+                        <div className="info-block"><strong>Processing:</strong> {p.processing}</div>
                         <div className="info-block">
                           <strong>Benefits:</strong>
                           <ul>
                             {p.benefit
-                              .split("\u2022")
+                              .split("•")
                               .map((b, bi) => b.trim() && <li key={bi}>{b.trim()}</li>)}
                           </ul>
                         </div>
