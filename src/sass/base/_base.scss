@@ -390,3 +390,60 @@ font-weight: 600;
 }
 
 
+.why-choose-modern {
+	.section-heading {
+	  font-size: 32px;
+	  font-weight: 700;
+	  color: #111;
+	}
+  
+	.why-grid {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	  gap: 30px;
+	}
+  
+	.why-card {
+	  background: #fff;
+	  padding: 30px 25px;
+	  border-radius: 16px;
+	  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+	  text-align: left;
+	  transition: all 0.3s ease;
+  
+	  h4 {
+		font-weight: 600;
+		margin: 20px 0 10px;
+		color: #222;
+	  }
+
+	  p{
+		text-align: justify;
+	  }
+  
+  
+	  &:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+	  }
+  
+	  .icon-box {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		color: white;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	  }
+  
+	  .orange { background: #ff7043; }
+	  .blue { background: #42a5f5; }
+	  .green { background: #26a69a; }
+	  .yellow { background: #fbc02d; }
+	}
+  }
+  
+

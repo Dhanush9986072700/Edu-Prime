@@ -5,9 +5,17 @@ import Scrollbar from '../../../components/scrollbar/scrollbar';
 import Footer from '../../../components/footer/Footer';
 import StudentFunFact from '../../../components/student-visa-components/StudentFunFact/StudentFunFact';
 import ContactSection from '../../../components/ContactSection';
-import aboutImg from '../../../images/about/about_img3.jpg';
-import aboutImg2 from '../../../images/bg/mission.jpg';
-import aboutImg3 from '../../../images/bg/vission.jpg';
+import aboutImg from '../../../images/about/About-banner-image.png';
+import MissionVision from '../../../components/about/MissionVision';
+import AboutServices from '../../../components/about/AboutServices';
+import Testimonial from '../../../components/Testimonial/Testimonial';
+import eImg1 from '../../../images/country/single2.jpg'
+import eImg from '../../../images/icon/global.svg'
+import eImg2 from '../../../images/icon/profile-2user-2.svg'
+import eImg3 from '../../../images/icon/teacher.svg'
+import eImg4 from '../../../images/icon/home-trend-up.svg'
+
+
 
 const AboutUsPage = () => {
     const ClickHandler = () => {
@@ -41,16 +49,17 @@ const AboutUsPage = () => {
             <section className="about pt-170">
                 <div className="container">
                     <div className="row mb-40 align-items-center">
-                        <div className="col-lg-6">
+                        <div className="col-lg-12">
                             <div className="sec-title mb-20">
-                                <h2 className="wow skewIn">
-                                    Committed to Your Visa <br /> <span>Success - About us</span>
+                                <h2 className="wow skewIn mb-20">
+                                    Eduprime Overseas <br /> <span>About us</span>
                                 </h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 offset-lg-1">
-                            <div className="sec-title mb-20">
-                                <p>We deliver budget-friendly visa solutions, removing financial barriers from your journey. Our goal is to provide quality services at reasonable rates.</p>
+                                <p className="col-lg-12 ">At Eduprime Overseas, we are more than just an educational consultancy—we are your trusted partner in shaping a successful future abroad. Since our founding in 2015, we have guided thousands of students, professionals, and investors in pursuing their global dreams through world-class education and immigration opportunities.
+                                    <br /> <br />
+                                    Whether you're a student seeking admission to top universities, an entrepreneur planning to invest or start a business abroad, or a jobseeker aiming for global work opportunities, Eduprime is here to support you at every step. Our experienced team offers expert advice, personalized counselling, and complete assistance—from university selection and visa applications to job seeker pathways and business migration.
+                                    <br /><br />
+                                    We proudly serve major destinations including the <span style={{ fontWeight: 700 }}>
+                                        UK, Canada, USA, Australia, New Zealand, Europe (Germany, Hungary, Poland, Latvia, Estonia, Czech Republic, and more), Ireland, France, Singapore, and Gulf countries </span> (including UAE and Dubai).</p>
                             </div>
                         </div>
                     </div>
@@ -62,45 +71,62 @@ const AboutUsPage = () => {
 
             <StudentFunFact />
 
-            <section className="mission pt-130 pb-130">
-                <div className="container">
-                    <div className="row align-items-center flex-row-reverse mt-none-30">
-                        <div className="col-lg-6 mt-30">
-                            <div className="mission__img text-lg-end">
-                                <div className="inner-img d-inline-block wow skewIn" data-wow-delay="200ms">
-                                    <img src={aboutImg2} alt="Edu Prime mission statement" loading="lazy" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mt-30">
-                            <div className="mission__content">
-                                <div className="sec-title">
-                                    <h2 className="mb-20 wow skewIn">Guiding Your Path with Our <br /> <span>Immigration Mission</span></h2>
-                                    <p>We're here to simplify immigration complexities, guiding you to success. Our mission is to unite families, open opportunities, and make your journey enriching. Your dreams are our focus on the path to a brighter future.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <MissionVision />
+            <AboutServices />
+            <section className="why-choose-modern pt-60 pb-60">
+  <div className="container">
+    <h2 className="section-heading text-center mb-50 wow fadeInUp">Why Choose Us?</h2>
+    <div className="why-grid">
 
-                    <div className="row align-items-center mt-100">
-                        <div className="col-lg-6 mt-30">
-                            <div className="mission__img">
-                                <div className="inner-img d-inline-block wow skewIn">
-                                    <img src={aboutImg3} alt="Edu Prime vision" loading="lazy" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mt-30">
-                            <div className="mission__content">
-                                <div className="sec-title">
-                                    <h2 className="mb-20 wow skewIn" data-wow-delay="200ms">Our Immigration <br /> <span>Service history</span></h2>
-                                    <p>Our history began with a vision to make the immigration process smoother and more accessible for individuals and families around the world. With a deep understanding of the challenges that accompany moving to a new country,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <div className="why-card wow fadeInUp" data-wow-delay="0.1s">
+        <div className="icon-box orange">
+          <i className="fas fa-globe" />
+        </div>
+        <h4>Supportive Environment</h4>
+        <p>
+          Our friendly and experienced team creates a stress-free process from start to finish,
+          making you feel confident and supported at every step of your visa journey.
+        </p>
+      </div>
+
+      <div className="why-card wow fadeInUp" data-wow-delay="0.2s">
+        <div className="icon-box blue">
+          <i className="fas fa-users" />
+        </div>
+        <h4>Student-Friendly Policies</h4>
+        <p>
+          We prioritize students' needs with customized study visa guidance, flexible options,
+          and constant updates to match current immigration policies in your preferred country.
+        </p>
+      </div>
+
+      <div className="why-card wow fadeInUp" data-wow-delay="0.3s">
+        <div className="icon-box green">
+          <i className="fas fa-graduation-cap" />
+        </div>
+        <h4>Quality Higher Education</h4>
+        <p>
+          We partner with reputed global universities and institutions, ensuring our students get access
+          to world-class education and brighter career prospects abroad.
+        </p>
+      </div>
+
+      <div className="why-card wow fadeInUp" data-wow-delay="0.4s">
+        <div className="icon-box yellow">
+          <i className="fas fa-chart-line" />
+        </div>
+        <h4>Opportunities for Growth</h4>
+        <p>
+          From job seeker visas to investor support, we help you explore long-term growth opportunities
+          across career, business, and lifestyle — all in one place.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+            <Testimonial />
 
             <ContactSection />
             <Footer />
