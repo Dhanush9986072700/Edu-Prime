@@ -1,6 +1,5 @@
 import React from 'react';
 import Services from '../../api/service';
-import sImg from '../../images/service/servicess-edu-prime.png';
 import sBg from '../../images/bg/service_bg.png';
 
 const ServiceSection = () => {
@@ -18,10 +17,7 @@ const ServiceSection = () => {
                             className="service-bg"
                             style={{ backgroundImage: `url(${sBg})` }}
                         ></div>
-                        <div
-                            className="service-img"
-                            style={{ backgroundImage: `url(${sImg})` }}
-                        ></div>
+                 
                     </div>
 
                     <div className="sec-title wow skewIn pt-120">
@@ -34,17 +30,10 @@ const ServiceSection = () => {
                         {Services.slice(0, 6).map((service, index) => (
                             <div className="col-lg-4 col-md-6 mt-30" key={index}>
                                 {service.title && (
-                                    <article
-                                        className="xb-service"
-                                        itemScope
-                                        itemType="https://schema.org/Service"
-                                    >
+                                    <article className="xb-service" itemScope itemType="https://schema.org/Service">
                                         <div className="xb-item--inner">
 
-                                            <div
-                                                className={`xb-item--icon mb-50 ${service.iconColor || ''}`}
-                                                aria-hidden="true"
-                                            >
+                                            <div className={`xb-item--icon mb-50 ${service.iconColor || ''}`} aria-hidden="true" >
                                                 {service.sIcon}
                                             </div>
 

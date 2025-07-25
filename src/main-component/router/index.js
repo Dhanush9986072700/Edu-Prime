@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
+import Loader from '../../components/preloader/preloader';
 
-// Lazy loaded pages
 const Homepage = lazy(() => import('../HomePage/HomePage'));
 const AboutUsPage = lazy(() => import('../../main-component/Pages/AboutUsPage/AboutUsPage'));
 const BlogDetails = lazy(() => import('../BlogDetails/BlogDetails'));
@@ -12,17 +12,29 @@ const StudyVisa = lazy(() => import('../../main-component/Pages/StudyVisa/Study-
 const TouristVisa = lazy(() => import('../Pages/TouristVisa/tourist-visa'));
 const InvestorVisa = lazy(() => import('../../main-component/Pages/Investor/InvestorVisa'));
 const JobseakerVisa = lazy(() => import('../../main-component/Pages/JobseakerVisa/JobseakerVisa'));
-
 const NotFound = lazy(() => import('../../components/NotFound/NotFound'));
 
-
 const AllRoute = () => {
+  const [preload, setPreload] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPreload(false);
+    }, 2000); // Adjust to match your GIF length
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show full-screen loader first before routing starts
+  if (preload) {
+    return <Loader />;
+  }
+
   return (
     <HelmetProvider>
       <div className="App" lang="en">
         <BrowserRouter>
           <ScrollToTop />
-          <Suspense fallback={<div style={{ padding: "100px", textAlign: "center" }}>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/home" element={<Homepage />} />
@@ -34,7 +46,6 @@ const AllRoute = () => {
               <Route path="/investor-visa" element={<InvestorVisa />} />
               <Route path="/jobseeker-visa" element={<JobseakerVisa />} />
               <Route path="*" element={<NotFound />} />
-
             </Routes>
           </Suspense>
         </BrowserRouter>

@@ -1,117 +1,37 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Link } from 'react-router-dom'
-import pimg1 from '../../images/brand/img_01.png'
-import pimg2 from '../../images/brand/img_02.png'
-import pimg3 from '../../images/brand/img_03.png'
-import pimg4 from '../../images/brand/img_04.png'
-import pimg5 from '../../images/brand/img_05.png'
-import pimg6 from '../../images/brand/img_06.png'
-import pimg7 from '../../images/brand/img_07.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCertificate,
+  faCheckCircle,
+  faShieldAlt,
+  faStar,
+  faThumbsUp
+} from "@fortawesome/free-solid-svg-icons";
 
-const partners = [
-    {
-        pImg: pimg1,
-    },
-    {
-        pImg: pimg2,
-    },
-    {
-        pImg: pimg3,
-    },
-    {
-        pImg: pimg4,
-    },
-    {
-        pImg: pimg5,
-    },
-    {
-        pImg: pimg6,
-    },
-    {
-        pImg: pimg7,
-    },
-    {
-        pImg: pimg2,
-    },
-]
+const features = [
+  { icon: faCertificate, label: "100% Genuine" },
+  { icon: faCheckCircle, label: "100% Success Rate" },
+  { icon: faShieldAlt, label: "Secure Process" },
+  { icon: faStar, label: "Top Rated Service" },
+  { icon: faThumbsUp, label: "Trusted Experts" }
+];
 
-
-const PartnerSection = (props) => {
-
-    var settings = {
-        dots: false,
-        arrows: false,
-        speed: 1000,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        responsive: [
-            {
-                breakpoint: 1500,
-                settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-    return (
-
-        <section className="brand pt-110 pb-90">
-            <div className="container">
-                <h2 className="brand-title text-center mb-50">
-                    <span><span>We're proud to work with our preferred partners</span></span>
-                </h2>
-                <div className="xb-swiper-sliders brand-slider">
-                    <div className="xb-carousel-inner">
-                        <div className="xb-swiper-container">
-                            <div className="xb-swiper-wrapper">
-                                <Slider {...settings}>
-                                    {partners.map((partner, pitem) => (
-                                        <div className="xb-swiper" key={pitem}>
-                                            <Link to="/"><img src={partner.pImg} alt="" /></Link>
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const PartnerSection = () => {
+  return (
+    <section className="container partner-section">
+      <h2 className="partner-title">Why People Trust Us</h2>
+      <div className="partner-grid">
+        {features.map((feature, index) => (
+          <div className="partner-card" key={index}>
+            <div className="partner-icon">
+              <FontAwesomeIcon icon={feature.icon} />
             </div>
-        </section>
-    );
-}
+            <p className="partner-label">{feature.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default PartnerSection;

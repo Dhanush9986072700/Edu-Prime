@@ -447,3 +447,56 @@ font-weight: 600;
   }
   
 
+  .partner-section {
+	padding: 5rem 1rem;
+  
+	.partner-title {
+	  text-align: center;
+	  margin-bottom: 3rem;
+	}
+  
+	.partner-grid {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	  gap: 2rem;
+	  margin: 0 auto;
+	  padding: 0 1rem;
+	}
+  
+	.partner-card {
+	  border-radius: 12px;
+	  padding: 1.5rem 1rem;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  text-align: center;
+	  transition: transform 0.3s ease;
+  
+	  &:hover {
+		transform: translateY(-4px);
+	  }
+  
+	  .partner-icon {
+		background-color: #104B83;
+		color: #fff;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.4rem;
+		margin-bottom: 0.8rem;
+	  }
+  
+	  .partner-label {
+		font-size: 1rem;
+		font-weight: 500;
+		color: #333;
+		line-height: 1.4;
+	  }
+	}
+  }
+  
+

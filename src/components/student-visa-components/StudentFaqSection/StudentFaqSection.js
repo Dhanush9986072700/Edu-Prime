@@ -30,12 +30,6 @@ const StudentFaqSection = (props) => {
                             <h3 className="sec-title--heading">Ask Question</h3>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-5">
-                        <div className="xb-faq-studient text-md-end mb-30">
-                            <h5 className="fw-bold text-uppercase text-12 letter-spacing-0 mb-20">We have worldwide 20K Happy Student</h5>
-                            <img src={aIcon2} alt="" />
-                        </div>
-                    </div>
                 </div>
                 <div className="xb-faq xb-faq2">
                     <Accordion open={open} toggle={toggle} className='accordion_box'>
