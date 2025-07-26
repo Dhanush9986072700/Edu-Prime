@@ -1,34 +1,41 @@
-// src/components/Visa/TuristVisaCountry.js
-
 import React, { useState } from 'react';
 import Pakage from '../../../api/pakageData';
 
 const TuristVisaCountry = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(15); // Show first 15 initially
 
   const filteredPakage = Pakage.filter(pkg =>
     pkg.country.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const handleViewMore = () => {
+    setVisibleCount(prev => prev + 15); // Load 15 more
+  };
+
+  const visiblePakage = filteredPakage.slice(0, visibleCount);
+
   return (
     <section className="pb-90">
       <div className="container">
         {/* Title + Search */}
-        <div className="row align-items-center justify-content-between mb-4 gy-3">
-          <div className="col-lg-6 col-md-12 text-center text-lg-start">
-            <div className="sec-title sec-title--travel">
-              <span className="subtitle">Popular Package</span>
+        <div className="row align-items-center justify-content-center mb-4 gy-3">
+          <div className="col-lg-6 col-md-12 text-center">
+            <div className="text-center">
               <h2>Popular Tourist Visa Packages</h2>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-end">
-            <div className="search-bar-wrapper">
+          <div className="search-bar-wrapper text-center my-4">
+            <div className="custom-search-bar">
               <input
                 type="text"
-                className="form-control search-input"
-                placeholder="Search Country..."
+                className="search-input"
+                placeholder="Search country..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setVisibleCount(15); // Reset visible count on search
+                }}
               />
             </div>
           </div>
@@ -36,18 +43,22 @@ const TuristVisaCountry = () => {
 
         {/* Visa Cards */}
         <div className="row mt-none-30 pt-10">
-          {filteredPakage.length > 0 ? (
-            filteredPakage.map((pakage, index) => (
+          {visiblePakage.length > 0 ? (
+            visiblePakage.map((pakage, index) => (
               <div className="col-lg-4 col-md-6" key={index}>
                 <div className="xb-package mt-30">
                   <div className="xb-item--inner">
                     <div className="xb-item--img">
-                      <img src={pakage.pImg} alt={`${pakage.country} visa`} />
+                      <img
+                        src={pakage.pImg}
+                        alt={`${pakage.country} visa`}
+                        loading="lazy"
+                      />
                     </div>
                     <div className="xb-item--holder">
                       <div className="xb-item--meta ul_li_between mb-15">
                         <div className="xb-item--country ul_li">
-                          <img src={pakage.flag} alt={`${pakage.country} flag`} />
+                          <img src={pakage.flag} alt={`${pakage.country} flag`} loading="lazy" />
                           <h2 className="xb-item--title">{pakage.country}</h2>
                         </div>
                         {pakage.tag && (
@@ -75,6 +86,19 @@ const TuristVisaCountry = () => {
             </div>
           )}
         </div>
+
+        {/* View More Button */}
+        {visibleCount < filteredPakage.length && (
+          <div className="text-center mt-4">
+            <button
+              className="btn btn-primary"
+              onClick={handleViewMore}
+              aria-label="Load more tourist visa packages"
+            >
+              View More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

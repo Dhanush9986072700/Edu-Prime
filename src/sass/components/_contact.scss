@@ -259,3 +259,113 @@
     }
 }
 
+.branch-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+    margin: 0 auto;
+  }
+  
+  .branch-card {
+    flex: 1 1 calc(50% - 30px);
+    background: linear-gradient(145deg, #ffffff, #f1f7ff);
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #104b83;
+    transition: all 0.3s ease;
+    backdrop-filter: saturate(180%) blur(8px);
+  
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 50px rgba(0, 0, 0, 0.1);
+    }
+  
+    .branch-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+  
+      .branch-flag {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #c9e4ff;
+        background: radial-gradient(circle at 30% 30%, #ffffff, #e6f1fb);
+        padding: 6px;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(16, 75, 131, 0.2);
+      }
+  
+      .branch-title {
+        margin: 0;
+      }
+    }
+  
+    .branch-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      .info-line {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+  
+        &:hover {
+          background: linear-gradient(135deg, #f0f7ff, #ffffff);
+        }
+  
+        .icon-circle {
+          min-width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: linear-gradient(145deg, #d7eaff, #ffffff);
+          box-shadow:
+            inset 2px 2px 6px rgba(255, 255, 255, 0.9),
+            inset -2px -2px 6px rgba(16, 75, 131, 0.15),
+            0 2px 5px rgba(0, 0, 0, 0.05);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.3s;
+  
+          i {
+            font-size: 18px;
+            color: #104b83;
+          }
+        }
+  
+        p {
+          transition: 0.3s;
+        }
+  
+        &:hover .icon-circle {
+          background: linear-gradient(145deg, #ffffff, #dceeff);
+          box-shadow:
+            0 2px 8px rgba(16, 75, 131, 0.2),
+            inset 1px 1px 3px rgba(255, 255, 255, 0.9);
+        }
+  
+        &:hover p {
+          color: #104b83;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex: 1 1 100%;
+    }
+  }
+  
+  
+  
+  
+  
+  

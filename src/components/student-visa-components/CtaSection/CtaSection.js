@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import aIcon1 from '../../../images/icon/h_star.png'
 import aIcon2 from '../../../images/icon/arrow_right.svg'
 import Bg from '../../../images/bg/cta_shape.png'
-import Bg2 from '../../../images/bg/cta_img.jpg'
+import Bg2 from '../../../images/bg/students-and-experts.png'
 
 
 const CtaSection = (props) => {

@@ -10,7 +10,6 @@ import Studentvisauniversity from '../../../components/student-visa-components/T
 import PopularPakage from '../../../components/Study-visa/StudyVisaCountries';
 import CtaSection from '../../../components/student-visa-components/CtaSection/CtaSection';
 import StudentFaqSection from '../../../components/student-visa-components/StudentFaqSection/StudentFaqSection';
-import StudentTestimonial from '../../../components/student-visa-components/StudentTestimonial/StudentTestimonial';
 import StudentFunFact from '../../../components/student-visa-components/StudentFunFact/StudentFunFact';
 import StudyVisaProcess from '../../../components/Study-visa/StudyVisaProcess';
 
@@ -50,7 +49,6 @@ const StudyVisa = () => {
             <CtaSection />
             <StudentFunFact />
             <StudentFaqSection />
-            <StudentTestimonial />
             <ContactSection />
             <Footer />
             <Scrollbar />

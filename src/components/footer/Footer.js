@@ -20,11 +20,11 @@ const Footer = () => {
                             <ul className="footer__cta list-unstyled mt-30">
                                 <li className="ul_li">
                                     <span><img src={icon1} alt="Phone" /></span>
-                                    +91 12345 67890
+                                    +91 96112 34182
                                 </li>
                                 <li className="ul_li">
                                     <span><img src={icon2} alt="Email" /></span>
-                                    info@eduprime.com
+                                    info@eduprimeoverseas.com
                                 </li>
                             </ul>
                         </div>

@@ -18,7 +18,7 @@ const SocialIcons = () => {
         aria-label="Social Media Links"
       >
         <a
-          href="https://wa.me/yourNumber"
+          href="https://wa.me/9611234182"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
@@ -74,7 +74,7 @@ const SocialIcons = () => {
         </a>
         <a
           className="whatsapp-icon"
-          href="https://wa.me/yourNumber"
+          href="https://wa.me/+91 96112 34182"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp Chat"

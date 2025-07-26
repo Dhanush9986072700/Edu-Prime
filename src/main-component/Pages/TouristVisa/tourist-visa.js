@@ -7,7 +7,6 @@ import TuristVisaCountry from '../../../components/travel-agency-components/Popu
 import CategoryLayout from '../../../components/travel-agency-components/CategorySection/CategoryLayout.js';
 import Testimonial from '../../../components/Testimonial/Testimonial.js';
 import ContactSection from '../../../components/ContactSection/index.js';
-import NewsLatter from '../../../components/NewsLatter/NewsLatter.js';
 import Footer from '../../../components/footer/Footer.js';
 import Scrollbar from '../../../components/scrollbar/scrollbar.js';
 import TuristVisaProcess from '../../../components/TuristVisaProcess/TuristVisaProcess.js';
@@ -44,7 +43,6 @@ const TouristVisa = () => {
                 <TuristVisaProcess />
                 <CategoryLayout />
                 <Testimonial />
-                <NewsLatter />
                 <ContactSection />
                 <Footer />
                 <Scrollbar />

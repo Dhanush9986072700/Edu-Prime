@@ -2,14 +2,14 @@ import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header3 from '../../components/header3/Header3';
-import PageTitle from '../../components/pagetitle/PageTitle';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import ContactSection from '../../components/ContactSection';
-import NewsLatter from '../../components/NewsLatter/NewsLatter';
 import Footer from '../../components/footer/Footer';
-import cimg1 from '../../images/country/img_01.png';
-import cimg2 from '../../images/country/img_02.png';
-import cimg3 from '../../images/country/img_03.png';
+import india from '../../images/flags/india.png';
+import uk from '../../images/flags/uk.png';
+
+import SocialIcons from '../../components/SocialIcons/SocialIcons';
+
 
 const ContactPage = (props) => {
     const ClickHandler = () => {
@@ -40,55 +40,69 @@ const ContactPage = (props) => {
             </Helmet>
 
             <Header3 />
-            <section className="contact pt-200 pb-120">
+            <section style={{ background: "none", paddingTop: "150px" }}>
+                <ContactSection />
+            </section>
+
+
+            <section className="contact pt-100 gray-bg">
                 <div className="container">
-                    <div className="row justify-content-md-center mt-none-30">
-                        <div className="col-lg-4 col-md-6 mt-30">
-                            <div className="xb-contact-info text-center">
-                                <div className="xb-item--flag">
-                                    <img src={cimg1} alt="Canada Office Flag" />
+                    <div className="branch-row">
+                        {/* Canada */}
+                        <div className="branch-card">
+                            <div className="branch-top">
+                                <img src={india} alt="Canada Flag" className="branch-flag" />
+                                <h4 className="branch-title">India</h4>
+                            </div>
+
+                            <div className="branch-info">
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-map-marker-alt"></i></div>
+                                    <p>Door no, Empire mall, 5-5-279/44, MG Rd, Kodailbail, Mangaluru, Karnataka 575003</p>
                                 </div>
-                                <h3 className="xb-item--title">
-                                    <Link onClick={ClickHandler} to="/country">(01) Visit Us Daily</Link>
-                                </h3>
-                                <div className="xb-item--content">
-                                    4140 Parker Rd. Allentown, <br /> Canada 31134
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-phone"></i></div>
+                                    <p>+91 96112 34182</p>
+                                </div>
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-envelope"></i></div>
+                                    <p>info@eduprimeoverseas.com</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6 mt-30">
-                            <div className="xb-contact-info text-center">
-                                <div className="xb-item--flag">
-                                    <img src={cimg2} alt="Australia Office Flag" />
-                                </div>
-                                <h3 className="xb-item--title">
-                                    <Link onClick={ClickHandler} to="/country">(02) Visit UK Daily</Link>
-                                </h3>
-                                <div className="xb-item--content">
-                                    8502 Preston Rd. Australia, <br /> Maine 98380
-                                </div>
+
+                        {/* UK */}
+                        <div className="branch-card">
+                            <div className="branch-top">
+                                <img src={uk} alt="Canada Flag" className="branch-flag" />
+                                <h4 className="branch-title">United Kingdom</h4>
                             </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 mt-30">
-                            <div className="xb-contact-info text-center">
-                                <div className="xb-item--flag">
-                                    <img src={cimg3} alt="Greece Office Flag" />
+
+                            <div className="branch-info">
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-map-marker-alt"></i></div>
+                                    <p>17 Strachey close saffron Walden CB10 2GN Essex United Kingdom</p>
                                 </div>
-                                <h3 className="xb-item--title">
-                                    <Link onClick={ClickHandler} to="/country">(03) Visit GR Daily</Link>
-                                </h3>
-                                <div className="xb-item--content">
-                                    8502 Preston Rd. Greece, <br /> Maine 85380
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-phone"></i></div>
+                                    <p>+91 96112 34182</p>
+                                </div>
+                                <div className="info-line">
+                                    <div className="icon-circle"><i className="fas fa-envelope"></i></div>
+                                    <p>info@eduprimeoverseas.com</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
+
             </section>
-            <NewsLatter />
-            <ContactSection />
             <Footer />
             <Scrollbar />
+            <SocialIcons />
         </Fragment>
     );
 };

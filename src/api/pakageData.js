@@ -24,145 +24,137 @@ import fIcon10 from '../images/flags/oman.png';
 
 const Pakage = [
   {
-    title: "Experience the USA’s iconic cities, national parks, and cultural sights with tourist visa help made simple and smooth.",
+    title: "USA Tourist Visa Support for Smooth Travel to Top Cities and Landmarks",
     country: "USA",
     pImg: pImg1,
     flag: fIcon1,
-    description: "From New York to LA, travel stress-free with help for interviews, documents, and approval chances made better.",
+    description: "Plan your trip across the USA—from New York to California—with expert guidance for visa interviews, documents, and approvals.",
     highlights: [
       "Multiple Entry Tourist Visa",
-      "Interview & Document Support",
-      "Fast & Transparent Guidance"
+      "Interview & Document Assistance",
+      "Step-by-Step Visa Guidance"
     ],
-    tag: "Visa in 12 Days",
-    link: "/contact"
+    tag: "Visa in 12 Days"
   },
   {
-    title: "Explore the United Arab Emirates — visit Dubai, Abu Dhabi, and desert wonders with expert visa assistance today.",
-    country: "United Arab Emirates",
+    title: "Dubai Visa Assistance – Travel to the UAE's Iconic City with Ease",
+    country: "Dubai (UAE)",
     pImg: pImg2,
     flag: fIcon2,
-    description: "We make your UAE trip easy — with smooth visa filing, hotel booking support, and all documentation handled.",
+    description: "Get fast tourist visa processing for Dubai, Abu Dhabi, and more—ideal for short stays, business, or luxury travel.",
     highlights: [
       "14 to 90-Day Tourist Visa",
-      "Quick Online Processing",
-      "No Interview Required"
+      "No Interview Required",
+      "Online & Hassle-Free Process"
     ],
-    tag: "Visa in 5 Days",
-    link: "/contact"
+    tag: "Visa in 5 Days"
   },
   {
-    title: "Discover Vietnam’s rich heritage, natural beauty, and street life with tourist visa support crafted for Indian travelers.",
+    title: "Vietnam Tourist Visa – Fast and Simple Visa Application Process",
     country: "Vietnam",
     pImg: pImg3,
     flag: fIcon3,
-    description: "From Hanoi to Ha Long Bay, enjoy fast visa service with full document help and e-visa submission guidance.",
+    description: "Travel from Hanoi to Ha Long Bay with reliable tourist visa support including e-visa guidance and complete documentation help.",
     highlights: [
       "30-Day e-Visa Available",
-      "Easy Paperless Process",
+      "100% Paperless Application",
       "Affordable Visa Fees"
     ],
-    tag: "Visa in 3 Days",
-    link: "/contact"
+    tag: "Visa in 3 Days"
   },
   {
-    title: "Travel to France — explore Paris, the Riviera, and history with Schengen visa support made easy and stress-free.",
+    title: "France Schengen Visa Support – Visit Paris, Riviera & Historic Sites",
     country: "France",
     pImg: pImg4,
     flag: fIcon4,
-    description: "Tour from Eiffel Tower to vineyards with expert help in Schengen paperwork, booking cover, and smooth filing.",
+    description: "Get expert assistance for your France trip including visa paperwork, hotel cover bookings, and Schengen documentation.",
     highlights: [
-      "Schengen Visa (Short Stay)",
-      "Covers 26 European Nations",
-      "Complete Visa Document Aid"
+      "Short-Stay Schengen Visa",
+      "Includes 26 Countries",
+      "Visa Filing Support"
     ],
-    tag: "Visa in 9 Days",
-    link: "/contact"
+    tag: "Visa in 9 Days"
   },
   {
-    title: "Visit South Korea — enjoy K-pop, palaces, and street food with complete tourist visa help from start to finish.",
+    title: "South Korea Tourist Visa – Explore Seoul, Busan & K-Culture",
     country: "South Korea",
     pImg: pImg5,
     flag: fIcon5,
-    description: "From Seoul to Busan, travel with ease using our step-by-step visa guidance, booking tips, and fast approval.",
+    description: "Enjoy easy visa help for South Korea—get support with documents, travel history, and quick application processing.",
     highlights: [
-      "Single & Double Entry Visa",
-      "Document & Travel History Help",
+      "Single/Double Entry Visa",
+      "Document Support Included",
       "Fast Processing Available"
     ],
-    tag: "Visa in 6 Days",
-    link: "/contact"
+    tag: "Visa in 6 Days"
   },
   {
-    title: "Discover Japan — from Tokyo lights to Kyoto temples, travel smart with personalized tourist visa support service.",
+    title: "Japan Tourist Visa Made Easy – Full Support from Start to Finish",
     country: "Japan",
     pImg: pImg6,
     flag: fIcon6,
-    description: "Get your Japan visa with ease — we guide you through appointments, embassy steps, and application process.",
+    description: "Plan your trip to Tokyo and Kyoto with smooth visa guidance, embassy appointment help, and checklist preparation.",
     highlights: [
       "90-Day Tourist Visa",
-      "Embassy Interview Help",
-      "Detailed Checklist Support"
+      "Embassy Appointment Help",
+      "Application Checklist Guidance"
     ],
-    tag: "Visa in 7 Days",
-    link: "/contact"
+    tag: "Visa in 7 Days"
   },
   {
-    title: "Explore the UK’s rich history, royal landmarks, and city charm with reliable visa support tailored for smooth travel.",
+    title: "UK Visitor Visa – Travel Across London, Scotland & More",
     country: "United Kingdom",
     pImg: pImg7,
     flag: fIcon7,
-    description: "Travel to London, Scotland, and beyond with stepwise help for UK visa documents, slots, and application filing.",
+    description: "Get complete assistance for your UK tourist visa application with help on documents, slots, and easy first-time filing.",
     highlights: [
       "6-Month Visitor Visa",
-      "Easy First-Time Filing",
-      "No Travel History Needed"
+      "No Travel History Needed",
+      "Beginner-Friendly Process"
     ],
-    tag: "Visa in 10 Days",
-    link: "/contact"
+    tag: "Visa in 10 Days"
   },
   {
-    title: "Explore the Europe Region — visit multiple countries with Schengen visa support made seamless and travel-ready.",
+    title: "Europe Tourist Visa – Schengen Travel Across 26 Countries",
     country: "Europe Region",
     pImg: pImg8,
     flag: fIcon8,
-    description: "From Italy to Spain, get support for visa documents, cover bookings, and all Schengen application guidance.",
+    description: "From Spain to Italy, get visa help for your Europe trip including document prep, flight cover, and Schengen paperwork.",
     highlights: [
-      "Single Visa for 26 Countries",
+      "Covers 26 European Nations",
       "Flight & Hotel Cover Help",
-      "Smooth Paperwork Support"
+      "Complete Visa Filing Support"
     ],
-    tag: "Visa in 9 Days",
-    link: "/contact"
+    tag: "Visa in 9 Days"
   },
   {
-    title: "Visit Switzerland — explore Alps, lakes, and heritage with full tourist visa help for a peaceful European journey.",
+    title: "Switzerland Tourist Visa – Plan a Peaceful European Escape",
     country: "Switzerland",
     pImg: pImg9,
     flag: fIcon9,
-    description: "From Zurich to Interlaken, enjoy stress-free travel with expert document help and Schengen visa filing made easy.",
+    description: "Visit the Alps, lakes, and cities with professional Schengen visa support and fast document handling.",
     highlights: [
-      "Schengen Visa Up to 90 Days",
-      "Itinerary & Stay Help Included",
-      "Fast Track Application Option"
+      "Up to 90-Day Schengen Visa",
+      "Itinerary Assistance",
+      "Optional Fast Track Filing"
     ],
-    tag: "Visa in 8 Days",
-    link: "/contact"
+    tag: "Visa in 8 Days"
   },
   {
-    title: "Explore Oman — from Muscat’s charm to desert escapes, travel confidently with quick tourist visa application support.",
+    title: "Oman Visa Assistance – Quick and Easy Middle East Travel",
     country: "Oman",
     pImg: pImg10,
     flag: fIcon10,
-    description: "Enjoy a scenic Middle East getaway — we handle your visa with step-by-step filing, booking tips, and clarity.",
+    description: "Discover Muscat and desert beauty with simple e-visa help, online filing, and step-by-step guidance.",
     highlights: [
-      "30-Day e-Visa Service",
-      "No Interview Required",
-      "Fast & Simple Online Filing"
+      "30-Day e-Visa Support",
+      "Simple Online Process",
+      "No Interview Required"
     ],
-    tag: "Visa in 4 Days",
-    link: "/contact"
-  }
+    tag: "Visa in 4 Days"
+  },
+
 ];
+
 
 export default Pakage;
