@@ -1,5 +1,5 @@
 import React from 'react';
-import about from '../../images/about/Immigration Guidance.png';
+import about from '../../images/about/Immigration Guidance.webp';
 
 const ImmigrationProcess = () => {
     return (

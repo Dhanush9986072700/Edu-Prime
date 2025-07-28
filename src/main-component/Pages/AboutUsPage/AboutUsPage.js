@@ -5,15 +5,10 @@ import Scrollbar from '../../../components/scrollbar/scrollbar';
 import Footer from '../../../components/footer/Footer';
 import StudentFunFact from '../../../components/student-visa-components/StudentFunFact/StudentFunFact';
 import ContactSection from '../../../components/ContactSection';
-import aboutImg from '../../../images/about/About-banner-image.png';
+import aboutImg from '../../../images/about/About-banner-image.webp';
 import MissionVision from '../../../components/about/MissionVision';
 import AboutServices from '../../../components/about/AboutServices';
 import Testimonial from '../../../components/Testimonial/Testimonial';
-import eImg1 from '../../../images/country/single2.jpg'
-import eImg from '../../../images/icon/global.svg'
-import eImg2 from '../../../images/icon/profile-2user-2.svg'
-import eImg3 from '../../../images/icon/teacher.svg'
-import eImg4 from '../../../images/icon/home-trend-up.svg'
 
 
 

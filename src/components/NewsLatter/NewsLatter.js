@@ -1,5 +1,5 @@
 import React from 'react'
-import Bg from '../../images/bg/newsletter_img.png'
+// import Bg from '../../images/bg/newsletter_img.png'
 
 
 const SubmitHandler = (e) => {

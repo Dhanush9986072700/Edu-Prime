@@ -4,7 +4,7 @@ import blogs from '../../api/blogs'
 import Services from '../../api/service';
 import icon from '../../images/icon/search.svg';
 import sicon3 from '../../images/icon/b_icon.png'
-import Bg from '../../images/bg/b_bg.jpg'
+// import Bg from '../../images/bg/b_bg.jpg'
 
 
 const BlogSidebar = (props) => {

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import fImg1 from '../../images/faq/Frequently-Asked-Questions.png';
+import fImg1 from '../../images/faq/Frequently-Asked-Questions.webp';
 import {
     Accordion,
     AccordionBody,

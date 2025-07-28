@@ -1,15 +1,15 @@
 // src/api/pakageData.js
 
-import pImg1 from '../images/package/usa.png';
-import pImg2 from '../images/package/United-arab-emirates.png';
-import pImg3 from '../images/package/vietnam.png';
-import pImg4 from '../images/package/France.png';
-import pImg5 from '../images/package/southkorea.png';
-import pImg6 from '../images/package/japan.png';
-import pImg7 from '../images/package/uk.png';
-import pImg8 from '../images/package/Europe-region.png';
-import pImg9 from '../images/package/switzerland.png';
-import pImg10 from '../images/package/oman.png';
+import pImg1 from '../images/package/usa.webp';
+import pImg2 from '../images/package/United-arab-emirates.webp';
+import pImg3 from '../images/package/vietnam.webp';
+import pImg4 from '../images/package/France.webp';
+import pImg5 from '../images/package/southkorea.webp';
+import pImg6 from '../images/package/japan.webp';
+import pImg7 from '../images/package/uk.webp';
+import pImg8 from '../images/package/Europe-region.webp';
+import pImg9 from '../images/package/switzerland.webp';
+import pImg10 from '../images/package/oman.webp';
 
 import fIcon1 from '../images/flags/USA.png';
 import fIcon2 from '../images/flags/UAE.png';

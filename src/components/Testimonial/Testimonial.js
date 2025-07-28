@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import TravelFunFact from '../../components/travel-agency-components/TravelFunFact/TravelFunFact';
 import logo from '../../images/icon/google.svg';
-import Bg from '../../images/bg/testimonial_bg.png';
+import Bg from '../../images/bg/testimonial_bg.webp';
 
 // Testimonials
 const testimonial = [

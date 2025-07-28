@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../sass/components/Hero5.scss';
-import heroBg from '../../images/bg/home-page-globle-immigration.png';
+import heroBg from '../../images/bg/home-page-globle-immigration.webp';
 import { Link } from 'react-router-dom';
 import SocialIcons from '../SocialIcons/SocialIcons';
 

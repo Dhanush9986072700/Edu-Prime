@@ -1,12 +1,11 @@
 import React from 'react';
 import VideoModal from '../../ModalVideo';
 import { Link } from 'react-router-dom'
-import aImg1 from '../../../images/about/Family enjoying sightseeing in a foreign city.png'
-import aImg2 from '../../../images/about/turist-visa-travaling.png'
-import aImg3 from '../../../images/about/turist-visa-passport-holding.png'
+import aImg1 from '../../../images/about/Family enjoying sightseeing in a foreign city.webp'
+import aImg2 from '../../../images/about/turist-visa-travaling.webp'
+import aImg3 from '../../../images/about/turist-visa-passport-holding.webp'
 
 import aIcon from '../../../images/icon/arrow-right.svg'
-import shape from '../../../images/shape/about_shape.png'
 
 
 const About = (props) => {

@@ -117,7 +117,6 @@
         left: 0;
         width: 3px;
         height: 46px;
-        background-image: url(../../images/shape/c_line.png);
         content: "";
         @include respond(lg) {
             right: -42px;

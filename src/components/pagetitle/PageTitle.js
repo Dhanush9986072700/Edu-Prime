@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Bg from '../../images/bg/about-us.png'
-import shape1 from '../../images/shape/br_shape1.png'
-import shape2 from '../../images/shape/br_shape2.png'
 
 
 const PageTitle = (props) => {

@@ -1,23 +1,23 @@
 // src/data/PopularPackageData.js
-import pImg1 from '../images/package/germany.png';
-import pImg2 from '../images/package/Netherlands.png';
-import pImg3 from '../images/package/Ireland.png';
-import pImg4 from '../images/package/France.png';
-import pImg5 from '../images/package/Italy.png';
-import pImg6 from '../images/package/Finland.png';
-import pImg7 from '../images/package/Sweden.png';
-import pImg8 from '../images/package/Malta.png';
-import pImg9 from '../images/package/Slovakia.png';
+import pImg1 from '../images/package/germany.webp';
+import pImg2 from '../images/package/Netherlands.webp';
+import pImg3 from '../images/package/Ireland.webp';
+import pImg4 from '../images/package/France.webp';
+import pImg5 from '../images/package/Italy.webp';
+import pImg6 from '../images/package/Finland.webp';
+import pImg7 from '../images/package/Sweden.webp';
+import pImg8 from '../images/package/Malta.webp';
+import pImg9 from '../images/package/Slovakia.webp';
 
-import fIcon1 from '../images/icon/Flag-icons/Germany.png';
-import fIcon2 from '../images/icon/Flag-icons/Netherlands.png';
-import fIcon3 from '../images/icon/Flag-icons/Ireland.png';
-import fIcon4 from '../images/icon/Flag-icons/france.png';
-import fIcon5 from '../images/icon/Flag-icons/italy.png';
-import fIcon6 from '../images/icon/Flag-icons/Finland.png';
-import fIcon7 from '../images/icon/Flag-icons/Sweden.png';
-import fIcon8 from '../images/icon/Flag-icons/Malta.png';
-import fIcon9 from '../images/icon/Flag-icons/Slovakia.png';
+import fIcon1 from '../images/flags/Germany.png';
+import fIcon2 from '../images/flags/Netherlands.png';
+import fIcon3 from '../images/flags/Ireland.png';
+import fIcon4 from '../images/flags/france.png';
+import fIcon5 from '../images/flags/Italy.png';
+import fIcon6 from '../images/flags/Finland.png';
+import fIcon7 from '../images/flags/Sweden.png';
+import fIcon8 from '../images/flags/Malta.png';
+import fIcon9 from '../images/flags/Slovakia.png';
 
 const StudyVisaData = [
   {

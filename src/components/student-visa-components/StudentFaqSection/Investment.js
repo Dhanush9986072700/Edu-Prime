@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import aIcon1 from '../../../images/icon/h_star.png'
-import aIcon2 from '../../../images/faq/Frequently-Asked-Questions.png';
+import aIcon2 from '../../../images/faq/Frequently-Asked-Questions.webp';
 import {
     Accordion,
     AccordionBody,

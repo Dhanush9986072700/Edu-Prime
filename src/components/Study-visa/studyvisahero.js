@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../sass/components/Hero5.scss';
-import heroBg from '../../images/bg/student-visa-banner.png';
+import heroBg from '../../images/bg/student-visa-banner.webp';
 import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Studyvisahero = () => {
