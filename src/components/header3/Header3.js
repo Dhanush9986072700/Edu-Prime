@@ -109,19 +109,21 @@ const Header3 = () => {
                                 <img src={searchIcon} alt="Search Icon" style={{ width: '20px', height: '20px' }} loading="lazy" />
                             </button>
 
-                            <button
-                                className="header__bar offcanvas-sidebar-btn"
-                                onClick={() => setSitebarState(!sitebarActive)}
-                                aria-label="Toggle Sidebar"
-                            >
-                                <div className="header__bar-icon"><span></span><span></span><span></span><span></span></div>
-                            </button>
+                            <a href="https://topmate.io/jostan?utm_campaign=Page_Ready&utm_medium=popup&utm_source=topmate&fbclid=PAQ0xDSwLxZa9leHRuA2FlbQIxMAABp2OIO6lcYDh67wo5uX-thIkH_grUr3KsB5Nv1rVCGfuQ5CVcJRSADKRk9zN1_aem_CL0wiqQFZXqffNIqmeaAHQ"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Book Personal Appointment"
+                                className="thm-btn-1"
+                                style={{ marginLeft: '20px' }} > personal consultation
+                            </a>
+
+
+
                         </div>
 
                         <div className="xb-hamburger-menu">
                             <div className="xb-nav-mobile">
-                                <div
-                                    className="xb-nav-mobile-button"
+                                <div className="xb-nav-mobile-button"
                                     onClick={() => setMobailState(!mobailActive)}
                                     aria-label="Toggle Mobile Menu"
                                 >

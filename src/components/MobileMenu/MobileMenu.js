@@ -104,24 +104,26 @@ const MobileMenu = ({ setSearchActive, setMobailState }) => {
 
       {/* Mobile Buttons and Social Links */}
       <div style={{ padding: '15px', marginTop: '20px' }}>
-        <Link
-          to="/book-appointment"
-          onClick={handleClick}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '10px 15px',
-            backgroundColor: '#004AAD',
-            color: '#fff',
-            borderRadius: '6px',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            marginBottom: '10px',
-          }}
-        >
-          Personal Consultation
-        </Link>
+      <a
+  href="https://topmate.io/jostan"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10px 15px',
+    backgroundColor: '#004AAD',
+    color: '#fff',
+    borderRadius: '6px',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    marginBottom: '10px',
+  }}
+>
+  Personal Consultation
+</a>
+
 
         <a
           href="https://wa.me/919000000000"

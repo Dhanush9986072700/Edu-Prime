@@ -50,6 +50,58 @@
         }
     }
 }
+.thm-btn-1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: None;
+    color: var(--color-white);
+    border-style: none;
+    padding: 21px 30px 23px;
+    align-self: center;
+    position: relative;
+    display: inline-block;
+    @include border-radius(10px);
+    line-height: 1.1;
+    letter-spacing: -.3px;
+    transition: all .2s cubic-bezier(.68,.01,.58,.75);
+    background-color: var(--color-primary);
+    &:hover {
+        color: var(--color-white);
+        background-color: var(--color-secondary);
+    }
+    &--white {
+        color: var(--color-dark);
+        background-color: var(--color-white);
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            span svg path {
+                stroke: #fff;
+            }
+        }
+    }
+    &--trv {
+        padding: 20px 50px 21px;
+        @include border-radius(91px);
+        &:hover {
+            background-color: #09AD84;
+            span {
+                @include transform(translateX(7px));
+            }
+        }
+        span {
+            padding-left: 21px;
+            display: inline-block;
+            @include transition(.3s var(--easing));
+            svg path {
+                @include transition(.3s var(--easing));
+            }
+        }
+        &.thm-btn--white:hover {
+            background-color: var(--color-primary);
+        }
+    }
+}
 .grd-btn {
     background-image: var(--color-gradient);
     font-size: 16px;
