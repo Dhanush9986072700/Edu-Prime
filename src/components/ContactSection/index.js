@@ -5,7 +5,7 @@ import shape from '../../images/icon/n_pad.svg'
 
 const ContactSection = (props) => {
     return (
-        <section className="contact contact-pt gray-bg">
+        <section className="contact contact-pt bg-white">
             <div className="container">
                 <div className="xb-contact pos-rel">
                     <div className="row">

@@ -28,7 +28,7 @@ const ServiceSection = () => {
 
                     <div className="row justify-content-md-center mt-none-30">
                         {Services.slice(0, 6).map((service, index) => (
-                            <div className="col-lg-4 col-md-6 mt-30" key={index}>
+                            <div className="col-lg-6 col-md-6 mt-30" key={index}>
                                 {service.title && (
                                     <article className="xb-service" itemScope itemType="https://schema.org/Service">
                                         <div className="xb-item--inner">

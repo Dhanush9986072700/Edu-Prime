@@ -214,17 +214,6 @@ const allPrograms = [
         processingValue: 14,
         benefit: "• Path to PR and citizenship • Business innovation stream • State sponsorship available",
       },
-      {
-        country: "New Zealand",
-        shortCode: "nz_investor",
-        icon: FlagNewZealand,
-        title: "New Zealand Investor Visa",
-        investment: "NZD 3,000,000",
-        investmentValue: 3000000,
-        processing: "6-12 months",
-        processingValue: 9,
-        benefit: "• Long-term residency • High investment threshold • Pathway to citizenship",
-      }
     ]
   },
   {

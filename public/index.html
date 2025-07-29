@@ -2,34 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Edu.Prime | Immigration & Visa Consulting Experts</title>
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon-replance.png" />
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-replance.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+    <!-- Theme and Colors -->
     <meta name="theme-color" content="#0056b3" />
 
+    <!-- SEO Meta -->
     <meta name="description" content="Edu.Prime is your trusted partner for global immigration, visa consulting, and relocation solutions. Expert guidance for Canada, USA, UK, and more." />
     <meta name="keywords" content="Immigration, Visa Consulting, Edu Prime, Study Abroad, L1 Visa, EB5 Visa, Work Visa, PR Visa, Relocation, Business Visa" />
     <meta name="author" content="Edu Prime Immigration" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Edu.Prime | Immigration & Visa Consulting Experts" />
     <meta property="og:description" content="Helping individuals and businesses move globally with confidence. Visa assistance for USA, Canada, UK, and more." />
-    <meta property="og:image" content="%PUBLIC_URL%/social-share-image.png" />
+    <meta property="og:image" content="%PUBLIC_URL%/social-share-image.webp" />
     <meta property="og:url" content="https://www.eduprime.com" />
     <meta property="og:type" content="website" />
 
+    <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Edu.Prime | Immigration & Visa Consulting Experts" />
     <meta name="twitter:description" content="Expert visa and immigration solutions for students, professionals, and corporates worldwide." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/social-share-image.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/social-share-image.webp" />
+
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="%PUBLIC_URL%/fonts/YourFont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/images/hero-banner.webp" as="image" />
+
+    <!-- Web Font FOUT Fix -->
+    <style>
+      html {
+        font-display: swap;
+      }
+    </style>
+
+    <!-- Structured Data (Optional for SEO Boost) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Edu Prime Immigration",
+      "url": "https://www.eduprime.com",
+      "logo": "https://www.eduprime.com/logo192.png",
+      "sameAs": [
+        "https://www.facebook.com/eduprime",
+        "https://www.instagram.com/eduprime",
+        "https://www.linkedin.com/company/eduprime"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript><strong>We're sorry, but Edu.Prime needs JavaScript to work properly. Please enable it in your browser.</strong></noscript>
     <div id="root"></div>
   </body>
 </html>

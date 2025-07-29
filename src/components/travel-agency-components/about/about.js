@@ -53,9 +53,9 @@ const About = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="xb-about-shape">
+            {/* <div className="xb-about-shape">
                 <img src={shape} alt="" />
-            </div>
+            </div> */}
             <h2 className="xb-strock-text">About Edu.Prime</h2>
         </section>
     )

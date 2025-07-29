@@ -45,7 +45,7 @@ const ContactPage = (props) => {
             </section>
 
 
-            <section className="contact pt-100 gray-bg">
+            <section className="contact pt-20 bg-white">
                 <div className="container">
                     <div className="branch-row">
                         {/* Canada */}
@@ -62,7 +62,7 @@ const ContactPage = (props) => {
                                 </div>
                                 <div className="info-line">
                                     <div className="icon-circle"><i className="fas fa-phone"></i></div>
-                                    <p>+91 96112 34182</p>
+                                    <p>+91 96112 34182 | +91 73489 35913</p>
                                 </div>
                                 <div className="info-line">
                                     <div className="icon-circle"><i className="fas fa-envelope"></i></div>
@@ -85,7 +85,7 @@ const ContactPage = (props) => {
                                 </div>
                                 <div className="info-line">
                                     <div className="icon-circle"><i className="fas fa-phone"></i></div>
-                                    <p>+91 96112 34182</p>
+                                    <p>+44 7446 478651</p>
                                 </div>
                                 <div className="info-line">
                                     <div className="icon-circle"><i className="fas fa-envelope"></i></div>

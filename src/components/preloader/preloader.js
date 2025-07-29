@@ -3,12 +3,17 @@ import '../../sass/components/_preloader.scss';
 
 const Loader = () => {
   return (
-    <div className="preloader">
-      <div className="preloader-inner">
-        <div className="text-spinner"></div>
-        <p className="preloader-text">Edu Prime Overseas – Loading...</p>
-      </div>
+    <div class="preloader">
+  <div class="preloader-inner">
+    <div class="bounce-loader">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <div class="preloader-text">Preparing your experience... Please hold tight ✨</div>
+  </div>
+</div>
+
   );
 };
 

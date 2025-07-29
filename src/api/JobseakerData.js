@@ -117,8 +117,9 @@ export const jobSeekerCountries = [
   {
     country: "Singapore",
     code: "sg",
-    description: "Jobseeker Pass allows foreign professionals to explore career opportunities for 6 months.",
-  },
+    description: "E Pass | S Pass | NTS",
+  }
+  ,
   {
     country: "United Kingdom",
     code: "gb",

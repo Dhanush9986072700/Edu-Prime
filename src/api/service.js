@@ -18,7 +18,7 @@ const Services = [
     {
         Id: '2',
         iconColor: 'color2',
-        sIcon: <FaGraduationCap style={{ color: 'white', width: '30px', height: '30px' }} />,
+        sIcon: <FaPlaneDeparture style={{ color: 'white', width: '30px', height: '30px' }} />,
         title: <Link to="/TouristVisa" onClick={ClickHandler}>Tourist Visa</Link>,
         description: 'Hassle-free tourist visa services with quick approvals and flexible packages for top travel destinations worldwide.',
     },
@@ -26,14 +26,14 @@ const Services = [
     {
         Id: '3',
         iconColor: 'color3',
-        sIcon: <FaGraduationCap style={{ color: 'white', width: '30px', height: '30px' }} />,
+        sIcon: <FaMoneyBillWave style={{ color: 'white', width: '30px', height: '30px' }} />,
         title: <Link to="/InvestorVisa" onClick={ClickHandler}>Investor Visa</Link>,
         description: 'Expert guidance on residency by investment programs to help entrepreneurs expand their business globally.',
     },
     {
         Id: '4',
         iconColor: 'color4',
-        sIcon: <FaGraduationCap style={{ color: 'white', width: '30px', height: '30px' }} />,
+        sIcon: <FaBriefcase style={{ color: 'white', width: '30px', height: '30px' }} />,
         title: <Link to="/JobseakerVisa" onClick={ClickHandler}>Job Seeker Visa</Link>,
         description: 'End-to-end support for job seekers including resume help, market insights, and relocation assistance for global careers.',
     },

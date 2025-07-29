@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import Loader from '../../components/preloader/preloader';
 
+// Lazy-loaded route components
 const Homepage = lazy(() => import('../HomePage/HomePage'));
 const AboutUsPage = lazy(() => import('../../main-component/Pages/AboutUsPage/AboutUsPage'));
 const BlogDetails = lazy(() => import('../BlogDetails/BlogDetails'));
@@ -20,11 +21,10 @@ const AllRoute = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPreload(false);
-    }, 2000); // Adjust to match your GIF length
+    }, 1500); // Keep this equal to actual GIF time
     return () => clearTimeout(timer);
   }, []);
 
-  // Show full-screen loader first before routing starts
   if (preload) {
     return <Loader />;
   }

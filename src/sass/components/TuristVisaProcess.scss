@@ -1,6 +1,6 @@
 .visa-process-container {
   padding: 30px 20px;
-  background-color: #f0fdfa; // light mint background
+  background-color: var(--color-gray-2); // light mint background
   border-radius: 30px;
 
   .section-title {
@@ -42,7 +42,7 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      background-color: #d9f1f0;
+      background-color: #d9ebfc;
       color: #104B83;
       font-weight: 600;
       font-size: 14px;
@@ -53,7 +53,7 @@
     .step-icon {
       width: 64px;
       height: 64px;
-      background-color: #d9f1f0;
+      background-color: #d9ebfc;
       color: #104B83;
       font-size: 26px;
       border-radius: 50%;
