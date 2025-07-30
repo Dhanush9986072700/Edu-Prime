@@ -504,6 +504,32 @@ font-weight: 600;
 	  }
 	}
   }
+
+  .pagination_wrap ul {
+	display: flex;
+	gap: 10px;
+  
+	li button {
+	  background: none;
+	  border: 1px solid #ddd;
+	  padding: 8px 14px;
+	  border-radius: 6px;
+	  cursor: pointer;
+	  font-weight: bold;
+	}
+  
+	li .current_page {
+	  background-color: #004AAD;
+	  color: white;
+	  border-color: #004AAD;
+	}
+  
+	li button:disabled {
+	  opacity: 0.4;
+	  cursor: not-allowed;
+	}
+  }
+  
   
   
 

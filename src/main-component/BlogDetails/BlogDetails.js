@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom'
 import blogs from '../../api/blogs'
-import Header from '../../components/header/Header';
-import PageTitle from '../../components/pagetitle/PageTitle'
+import Header3 from '../../components/header3/Header3';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import BlogSingle from '../../components/BlogDetails/BlogDetails';
 import ContactSection from '../../components/ContactSection';
-import NewsLatter from '../../components/NewsLatter/NewsLatter';
 import Footer from '../../components/footer/Footer';
 
 
@@ -18,10 +16,8 @@ const BlogDetails = (props) => {
 
     return (
         <Fragment>
-            <Header />
-            <PageTitle pageTitle={BlogDetails.title} pagesub={'Blog'} />
+            <Header3 />
             <BlogSingle/>
-            <NewsLatter />
             <ContactSection />
             <Footer />
             <Scrollbar />

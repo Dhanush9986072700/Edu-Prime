@@ -45,6 +45,7 @@ const Footer = () => {
                                     <ul className="footer__links list-unstyled footer-white-color">
                                         <li><Link to="/investor-visa" onClick={ClickHandler}>Investor Visa</Link></li>
                                         <li><Link to="/jobseeker-visa" onClick={ClickHandler}>Job Seeker Visa</Link></li>
+                                        <li><Link to="/blog" onClick={ClickHandler}>Blog</Link></li>
                                         <li><Link to="/contact" onClick={ClickHandler}>Contact Us</Link></li>
                                     </ul>
                                 </div>

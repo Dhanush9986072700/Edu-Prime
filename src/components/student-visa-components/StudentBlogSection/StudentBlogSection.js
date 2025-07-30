@@ -29,7 +29,7 @@ const StudentBlogSection = (props) => {
                             <div className="xb-blog2 xb-blog2--big">
                                 <div className="xb-item--inner">
                                     <div className="xb-item--img">
-                                        <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><img src={blog.screens} alt="" /></Link>
+                                        <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}><img src={blog.screens} alt="" /></Link>
                                     </div>
                                     <div className="xb-item--holder">
                                         <div className="xb-item--meta">
@@ -40,7 +40,7 @@ const StudentBlogSection = (props) => {
                                                 <li><span><img src={icon3} alt="" /></span>{blog.comment}</li>
                                             </ul>
                                         </div>
-                                        <h2 className="xb-item--title border-effect"><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></h2>
+                                        <h2 className="xb-item--title border-effect"><Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.title}</Link></h2>
                                         <p className="xb-item--content">{blog.description}</p>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ const StudentBlogSection = (props) => {
                                                     <li><span><img src={icon1} alt="" /></span>{blog.thumb}</li>
                                                 </ul>
                                             </div>
-                                            <h2 className="xb-item--title border-effect"><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></h2>
+                                            <h2 className="xb-item--title border-effect"><Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.title}</Link></h2>
                                             <p className="xb-item--content">{blog.description}</p>
                                         </div>
                                     </div>

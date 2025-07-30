@@ -1,23 +1,22 @@
 import React, { Fragment } from 'react';
-import Header from '../../components/header/Header';
-import PageTitle from '../../components/pagetitle/PageTitle'
+import Header3 from '../../components/header3/Header3';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import BlogList from '../../components/BlogList';
 import ContactSection from '../../components/ContactSection';
-import NewsLatter from '../../components/NewsLatter/NewsLatter';
 import Footer from '../../components/footer/Footer';
+import SocialIcons from '../../components/SocialIcons/SocialIcons';
+
 
 const FaqPage = (props) => {
 
     return (
         <Fragment>
-            <Header />
-            <PageTitle pageTitle={'Blog'} pagesub={'Blog'} />
+            <Header3 />
             <BlogList />
-            <NewsLatter />
             <ContactSection />
             <Footer />
             <Scrollbar />
+            <SocialIcons />
         </Fragment>
     )
 };

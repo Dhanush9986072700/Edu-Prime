@@ -1,66 +1,118 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import BlogSidebar from '../BlogSidebar'
-import blogs from '../../api/blogs'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import BlogSidebar from '../BlogSidebar';
+import blogs from '../../api/blogs';
 
-
-
-const BlogList = (props) => {
-
+const BlogList = () => {
     const ClickHandler = () => {
         window.scrollTo(10, 0);
-    }
+    };
+
+    const blogsPerPage = 5;
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(blogs.length / blogsPerPage);
+    const startIndex = (currentPage - 1) * blogsPerPage;
+    const currentBlogs = blogs.slice(startIndex, startIndex + blogsPerPage);
+
+    const handlePageClick = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        ClickHandler();
+    };
+
+    const handlePrev = () => {
+        if (currentPage > 1) {
+            setCurrentPage(prev => prev - 1);
+            ClickHandler();
+        }
+    };
+
+    const handleNext = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(prev => prev + 1);
+            ClickHandler();
+        }
+    };
 
     return (
-        <section className="blog pt-120 pb-120">
+        <section className="blog pt-200 pb-120">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
                         <div className="blog-post-wrapper">
-
-                            {blogs.slice(0, 4).map((blog, bitem) => (
+                            {currentBlogs.map((blog, bitem) => (
                                 <article className="single-post-item" key={bitem}>
                                     <div className="post-thumbnail-wrapper">
-                                        <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><img src={blog.bSingle} alt="" /></Link>
+                                        <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>
+                                            <img src={blog.bSingle} alt={blog.title} />
+                                        </Link>
                                     </div>
                                     <div className="post-content-wrapper">
                                         <ul className="post-meta ul_li">
-                                            <li><span><i className="far fa-user"></i><span className="author vcard">{blog.author}</span></span></li>
-                                            <li><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><i className="far fa-comments"></i> Comments ({blog.comment})</Link></li>
-                                            <li><span className="posted-on"><i className="far fa-calendar-check"></i> <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.create_at}</Link></span></li>
+                                            <li>
+                                                <span><i className="far fa-user"></i> <span className="author vcard">{blog.author}</span></span>
+                                            </li>
+                                            <li>
+                                                <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>
+                                                    <i className="far fa-comments"></i> Comments ({blog.comment})
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <span className="posted-on">
+                                                    <i className="far fa-calendar-check"></i>
+                                                    <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.create_at}</Link>
+                                                </span>
+                                            </li>
                                         </ul>
-                                        <h3 className="post-title border_effect"><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></h3>
+                                        <h3 className="post-title border_effect">
+                                            <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.title}</Link>
+                                        </h3>
                                         <div className="post-excerpt">
-                                            <p>Navigating Complexity with Confidence" is a concise and impactful title that captures the essence of how visa consultants can assist in making the intricate visa process more manageable ...</p>
+                                            <p>{blog.description}</p>
                                         </div>
                                         <div className="post-read-more">
-                                            <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`} className="thm-btn">Read More</Link>
+                                            <Link onClick={ClickHandler} to={`/blog/${blog.slug}`} className="thm-btn">Read More</Link>
                                         </div>
                                     </div>
                                 </article>
                             ))}
 
+                            {/* Pagination */}
                             <div className="pagination_wrap pt-20">
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/blog"><i className="far fa-long-arrow-left"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog" className="current_page">01</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog">02</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog"><i className="fal fa-ellipsis-h"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog">08</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/blog"><i className="far fa-long-arrow-right"></i></Link></li>
+                                    <li>
+                                        <button onClick={handlePrev} disabled={currentPage === 1}>
+                                            <i className="far fa-long-arrow-left"></i>
+                                        </button>
+                                    </li>
+
+                                    {[...Array(totalPages)].map((_, index) => (
+                                        <li key={index}>
+                                            <button
+                                                className={currentPage === index + 1 ? 'current_page' : ''}
+                                                onClick={() => handlePageClick(index + 1)}
+                                            >
+                                                {index + 1}
+                                            </button>
+                                        </li>
+                                    ))}
+
+                                    <li>
+                                        <button onClick={handleNext} disabled={currentPage === totalPages}>
+                                            <i className="far fa-long-arrow-right"></i>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    {/* Sidebar */}
                     <BlogSidebar />
-
                 </div>
             </div>
         </section>
-
-    )
-
-}
+    );
+};
 
 export default BlogList;
