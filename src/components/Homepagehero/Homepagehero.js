@@ -19,7 +19,7 @@ const Homepagehero = () => {
 
             {/* Optional visually hidden image for SEO crawlers */}
             <div style={{ display: 'none' }}>
-                <img src={heroBg} alt="Global immigration hero banner" />
+                <img src={heroBg} alt="Edu Prime Global immigration logo" />
             </div>
 
             <div className="hero5__content">
@@ -38,7 +38,7 @@ const Homepagehero = () => {
                         onClick={ClickHandler}
                         aria-label="Navigate to Contact page for free consultation"
                     >
-                        Get Free Consultation
+                        Book Your Slot
                     </Link>
                 </div>
             </div>

@@ -104,46 +104,24 @@ const MobileMenu = ({ setSearchActive, setMobailState }) => {
 
       {/* Mobile Buttons and Social Links */}
       <div style={{ padding: '15px', marginTop: '20px' }}>
-      <a
-  href="https://topmate.io/jostan"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '10px 15px',
-    backgroundColor: '#004AAD',
-    color: '#fff',
-    borderRadius: '6px',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  }}
->
-  Personal Consultation
-</a>
-
-
         <a
-          href="https://wa.me/919000000000"
+          href="https://topmate.io/jostan"
           target="_blank"
           rel="noopener noreferrer"
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '10px 15px',
-            backgroundColor: '#25D366',
+            padding: '14px 0px',
+            backgroundColor: '#104b83',
             color: '#fff',
             borderRadius: '6px',
             textDecoration: 'none',
             fontWeight: 'bold',
             marginBottom: '10px',
           }}
-          aria-label="Chat with us on WhatsApp"
         >
-          WhatsApp Chat
+          Personal Consultation
         </a>
 
         {/* Social Icons */}

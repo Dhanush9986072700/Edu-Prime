@@ -1,15 +1,8 @@
 .process-timeline {
   padding: 40px 20px;
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   &__title {
     text-align: center;
-    font-size: 38px;
-    color: #104B83;
     font-weight: 600;
     margin-bottom: 60px;
     position: relative;
@@ -27,22 +20,25 @@
 
   &__row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap: 40px;
       align-items: center;
     }
   }
 
   &__card {
+    flex: 1 1 0;
+    min-width: 0;
     background: #ffffff;
     border-radius: 16px;
-    width: 240px;
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -66,7 +62,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: #bad3e8;
+    background-color: #e6f4ff;
     color: #104B83;
     display: flex;
     align-items: center;
@@ -79,14 +75,10 @@
   &__heading {
     font-size: 18px;
     font-weight: 600;
-    color: #104B83;
     margin-bottom: 10px;
   }
 
   &__description {
-    font-size: 14px;
-    color: #4b4b4b;
-    font-family: 'Lato', sans-serif;
     line-height: 1.6;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -101,15 +93,15 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 768px) {
-      transform: rotate(90deg);
-      margin: 10px 0;
-    }
-
     svg {
       width: 28px;
       height: 28px;
       animation: bounceRight 1s infinite alternate;
+    }
+
+    @media (max-width: 768px) {
+      transform: rotate(90deg);
+      margin: 10px 0;
     }
   }
 

@@ -67,7 +67,7 @@ const SocialIcons = () => {
       >
         <a
           className="consult-btn"
-          href="#consult-form"
+          href="/contact"
           aria-label="Get Free Consultation"
         >
           Get Free Consultation

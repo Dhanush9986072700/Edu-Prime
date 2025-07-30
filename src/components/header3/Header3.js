@@ -114,7 +114,7 @@ const Header3 = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Book Personal Appointment"
                                 className="thm-btn-1"
-                                style={{ marginLeft: '20px' }} > personal consultation
+                                style={{ marginLeft: '20px' }} > Personal Consultation
                             </a>
 
 
