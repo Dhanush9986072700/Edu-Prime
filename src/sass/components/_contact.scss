@@ -267,7 +267,13 @@
     gap: 30px;
     padding: 50px 20px;
     margin: 0 auto;
+  
+    // Disable padding for mobile
+    @media (max-width: 768px) {
+      padding: 0; // or padding: 0 !important; if it's not overriding
+    }
   }
+  
   
   .branch-card {
     flex: 1 1 calc(50% - 30px);
@@ -363,6 +369,15 @@
       flex: 1 1 100%;
     }
   }
+
+  .contact-section-topspace {
+    padding-top: 150px;
+  
+    @media (max-width: 768px) {
+      padding-top: 50px;
+    }
+  }
+  
   
   
   

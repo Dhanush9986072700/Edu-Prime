@@ -18,7 +18,7 @@ const SocialIcons = () => {
         aria-label="Social Media Links"
       >
         <a
-          href="https://wa.me/9611234182"
+          href="https://wa.me/919611234182"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
@@ -26,7 +26,7 @@ const SocialIcons = () => {
           <i className="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/share/1EyPjQNkM2/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -34,7 +34,7 @@ const SocialIcons = () => {
           <i className="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/jostan.uk?igsh=dTdua29qYTJwcjZh"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -42,21 +42,14 @@ const SocialIcons = () => {
           <i className="fab fa-instagram" aria-hidden="true"></i>
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://uk.linkedin.com/in/jostan-dsouza-965304117"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
           <i className="fab fa-linkedin-in" aria-hidden="true"></i>
         </a>
-        <a
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-        >
-          <i className="fab fa-twitter" aria-hidden="true"></i>
-        </a>
+
       </div>
 
       {/* Mobile Consultation Bar */}
@@ -74,7 +67,7 @@ const SocialIcons = () => {
         </a>
         <a
           className="whatsapp-icon"
-          href="https://wa.me/+91 96112 34182"
+          href="https://wa.me/919611234182"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp Chat"

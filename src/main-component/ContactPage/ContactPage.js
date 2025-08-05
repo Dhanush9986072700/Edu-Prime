@@ -40,7 +40,7 @@ const ContactPage = (props) => {
             </Helmet>
 
             <Header3 />
-            <section style={{ background: "none", paddingTop: "150px" }}>
+            <section className="contact-section-topspace">
                 <ContactSection />
             </section>
 
